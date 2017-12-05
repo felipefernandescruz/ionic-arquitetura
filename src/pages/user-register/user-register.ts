@@ -3,14 +3,7 @@ import { BasePage } from '../base';
 import { RegisterModel } from '../../models/register.model';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
-import { UserProvider } from '../../providers/user/user';
-
-/**
- * Generated class for the UserRegisterPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { UserRegisterEmailPage } from '../user-register-email/user-register-email';
 
 
 @Component({
@@ -24,7 +17,7 @@ export class UserRegisterPage extends BasePage{
 
   public isSubmitted: boolean;
 
-  constructor(protected injector: Injector, private userProvider : UserProvider) {
+  constructor(protected injector: Injector) {
     super(injector);
 
     this.initFormValidators();
@@ -52,25 +45,9 @@ export class UserRegisterPage extends BasePage{
   }
 
   public onSubmit(){
-
     this.isSubmitted = true;
-    console.log(this.isSubmitted);
-    console.log(this.registerForm.valid);
-    if(this.registerForm.valid){
-      this.loadingHelper.showLoading();
-      
-      this.userProvider.register(this.registerModel)
-      .subscribe(success.bind(this), error.bind(this))
-    }
-
-    function success(data){
-      this.loadingHelper.hideLoading();
-      this.alertHelper.okAlert("Registro Cadastrado com sucesso");
-
-    }
-    function error(data){
-      this.loadingHelper.hideLoading();
-      this.alertHelper.okAlert(data);
+    if(this.registerForm.valid){     
+      this.navCtrl.push(UserRegisterEmailPage,this.registerModel);      
     }
   }
 

@@ -16,5 +16,6 @@
     "INVALID_EMAIL":"Email inválido!" ,
     "EMAIL_NOT_MATCH":"Emails diferentes" ,
     "PASSWORD_NOT_MATCH":"As senhas não são iguais" ,
-    "MIN_ERROR":"Favor digite um valor maior" 
+    "MIN_ERROR":"Favor digite um valor maior",
+    "EMAIL_CONFIRM":"Confirmar email"  
 }

@@ -18,16 +18,17 @@ import { CustomFormsModule } from 'ng2-validation';
 import { BaseProvider } from '../providers/base/base';
 import { UserProvider } from '../providers/user/user';
 
+import { AlertHelper } from '../helpers/alert-helper';
+import { EnumHelper } from '../helpers/enum-helper';
+import { LoadingHelper } from '../helpers/loading-helper';
+
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
-import { UserRegisterPage } from '../pages/user-register/user-register';
-import { AlertHelper } from '../helpers/alert-helper';
-import { EnumHelper } from '../helpers/enum-helper';
-import { LoadingHelper } from '../helpers/loading-helper';
-import { StorageHelper } from '../helpers/storage-helper';
+import { UserRegisterPage } from '../pages/user-register/user-register';import { StorageHelper } from '../helpers/storage-helper';
+import { UserRegisterEmailPage } from '../pages/user-register-email/user-register-email';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -42,7 +43,8 @@ export function createTranslateLoader(http: HttpClient) {
     HomePage,
     TabsPage,
     LoginPage,
-    UserRegisterPage
+    UserRegisterPage,
+    UserRegisterEmailPage,
   ],
   imports: [
     BrowserModule,
@@ -68,7 +70,8 @@ export function createTranslateLoader(http: HttpClient) {
     HomePage,
     TabsPage,
     LoginPage,
-    UserRegisterPage
+    UserRegisterPage,
+    UserRegisterEmailPage
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},
