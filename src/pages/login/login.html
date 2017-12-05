@@ -1,0 +1,47 @@
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+        {{"LOGIN" | translate}}
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list no-lines>
+        <ion-item>
+          <ion-label floating>
+            {{"EMAIL" | translate}}
+          </ion-label>
+          <ion-input type="email" name="email"[(ngModel)]="email"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>
+              {{"PASSWORD" | translate}}
+            </ion-label>
+            <ion-input type="password" name="password"[(ngModel)]="password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <p>
+              {{"FORGGET_PASSWORD" | translate}}
+            <a color="azul">
+                {{"CLIK_HERE" | translate}}
+            </a></p>
+        </ion-item>
+        <button ion-button color="resenha" block outline (click)="enter(email,password)">
+          {{"LOGIN" | translate}}
+        </button>
+        </ion-list>
+        <b>OR</b>
+        <button ion-button icon-left color="azul" (click)="onLoginFacebook()"  block>
+            <ion-icon  name="logo-facebook" ></ion-icon>
+          <div>
+              {{"LOGIN_FACEBOOK" | translate}}
+          </div>
+        </button>
+        <button ion-button color="resenha" icon-left block (click)="newUser()">
+         <ion-icon item-start name="person-add"></ion-icon>
+          <div>
+              {{"CREATE_NEW_USER" | translate}}
+          </div>
+       </button>
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>
