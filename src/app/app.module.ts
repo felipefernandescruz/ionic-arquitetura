@@ -3,6 +3,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+import { Facebook } from '@ionic-native/facebook';
 
 import { ComponentsModule } from '../components/components.module';
 import { DirectivesModule } from '../directives/directives.module';
@@ -17,18 +18,27 @@ import { CustomFormsModule } from 'ng2-validation';
 
 import { BaseProvider } from '../providers/base/base';
 import { UserProvider } from '../providers/user/user';
+import { FacebookUsersProvider } from '../providers/facebook-users/facebook-users';
 
 import { AlertHelper } from '../helpers/alert-helper';
 import { EnumHelper } from '../helpers/enum-helper';
 import { LoadingHelper } from '../helpers/loading-helper';
 
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
 import { UserRegisterPage } from '../pages/user-register/user-register';import { StorageHelper } from '../helpers/storage-helper';
 import { UserRegisterEmailPage } from '../pages/user-register-email/user-register-email';
+import { MenuPage } from '../pages/menu/menu';
+import { ResenhaPage } from '../pages/resenha/resenha';
+import { FavoritePage } from '../pages/favorite/favorite';
+import { FriendsPage } from '../pages/friends/friends';
+import { MapPage } from '../pages/map/map';
+import { UserProfilePage } from '../pages/user-profile/user-profile';
+
+
+
+
+
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -38,13 +48,16 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
     TabsPage,
     LoginPage,
     UserRegisterPage,
     UserRegisterEmailPage,
+    MenuPage,
+    ResenhaPage,
+    FavoritePage,
+    FriendsPage,
+    MapPage,
+    UserProfilePage
   ],
   imports: [
     BrowserModule,
@@ -65,15 +78,19 @@ export function createTranslateLoader(http: HttpClient) {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
     TabsPage,
     LoginPage,
     UserRegisterPage,
-    UserRegisterEmailPage
+    UserRegisterEmailPage,
+    MenuPage,
+    ResenhaPage,
+    FavoritePage,
+    FriendsPage,
+    MapPage,
+    UserProfilePage
   ],
   providers: [
+    Facebook,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     { provide: LOCALE_ID, useValue: "pt-BR" },
     StatusBar,
@@ -85,7 +102,11 @@ export function createTranslateLoader(http: HttpClient) {
     StorageHelper,
    
     BaseProvider,
-    UserProvider
+    UserProvider,
+    FacebookUsersProvider,
+
+   // Facebook
+
   ]
 })
 export class AppModule {}

@@ -4,7 +4,7 @@ import { BasePage } from '../base';
 import { FormGroup } from '@angular/forms/src/model';
 import { RegisterModel } from '../../models/register.model';
 import { UserProvider } from '../../providers/user/user';
-import { TabsPage } from '../tabs/tabs';
+import { MenuPage } from '../menu/menu';
 
 /**
  * Generated class for the UserRegisterEmailPage page.
@@ -53,7 +53,7 @@ export class UserRegisterEmailPage extends BasePage {
           if(this.confirmEmail == this.registerModel.email){
             this.loadingHelper.showLoading();
             
-            this.navCtrl.setRoot(TabsPage);
+            this.navCtrl.setRoot(MenuPage);
 
             this.userProvider.register(this.registerModel)
             .subscribe(success.bind(this), error.bind(this))

@@ -1,21 +1,35 @@
 {
-    "LOGIN": "Entrar",
+    "CLIK_HERE": "Clique aqui!",
+    "CREATE_NEW_USER": "Criar novo usuário",
+ 
     "EMAIL": "Email",
-    "NAME": "Nome",
+    "EMAIL_CONFIRM":"Confirmar email",
+    "EMAIL_NOT_MATCH":"Emails diferentes",
+  
+    "FAVORITE": "Favorito",
+    "FORGGET_PASSWORD": "Esqueceu a senha?",
+    "FRIENDS": "Amigos",
+
+    "INVALID_EMAIL":"Email inválido!" ,
+ 
     "LAST_NAME": "Sobrenome",
+    "LOGIN": "Entrar",
+    "LOGIN_FACEBOOK": "Entrar com o Facebook",
+
+    "MANDATORY_FIELD":"Campo obrigatório!",
+    "MAP": "Mapa",
+    "MIN_ERROR":"Favor digite um valor maior",
+    
+    "NAME": "Nome",
+    "NEW_USER":"Novo usuário",
+  
     "PASSWORD": "Senha",
     "PASSWORD_CONFIRM": "Confirmar senha",
-    "FORGGET_PASSWORD": "Esqueceu a senha?",
-    "CLIK_HERE": "Clique aqui!",
-    "LOGIN_FACEBOOK": "Entrar com o Facebook",
-    "CREATE_NEW_USER": "Criar novo usuário",
-    "NEW_USER":"Novo usuário",
-    "WELCOME":"Bem vindo ao Resenha App",
+    "PASSWORD_NOT_MATCH":"As senhas não são iguais",
+    "PROFILE":"Perfil",
+  
     "REGISTER":"Cadastrar",
-    "MANDATORY_FIELD":"Campo obrigatório!",
-    "INVALID_EMAIL":"Email inválido!" ,
-    "EMAIL_NOT_MATCH":"Emails diferentes" ,
-    "PASSWORD_NOT_MATCH":"As senhas não são iguais" ,
-    "MIN_ERROR":"Favor digite um valor maior",
-    "EMAIL_CONFIRM":"Confirmar email"  
+    "RESENHA": "Resenha",
+
+    "WELCOME":"Bem vindo ao Resenha App"   
 }

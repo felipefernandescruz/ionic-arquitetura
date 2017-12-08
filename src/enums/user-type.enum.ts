@@ -1,7 +1,7 @@
 export class UserType {
     
         public static readonly Customer = new UserType(1, "CUSTOMER");
-        public static readonly Commerce = new UserType(2, "COMMERCE");
+        public static readonly Facebook = new UserType(2, "FACEBOOK");
     
         public Id: number;
         public Name: string;
@@ -13,7 +13,7 @@ export class UserType {
     
         public static List() {
             return [
-                this.Customer, this.Commerce
+                this.Customer, this.Facebook
             ];
         }
     }

@@ -1,10 +1,12 @@
 import { Component,Injector } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage } from 'ionic-angular';
 import { BasePage } from '../base';
 import { UserRegisterPage } from '../user-register/user-register';
 import { LoginModel } from '../../models/login.model';
 import { FormGroup } from '@angular/forms/src/model';
-import { TabsPage } from '../tabs/tabs';
+import { MenuPage } from '../menu/menu';
+import { FacebookModel } from '../../models/facebook.model';
+import { FacebookUsersProvider } from '../../providers/facebook-users/facebook-users';
 
 
 @IonicPage()
@@ -19,12 +21,13 @@ export class LoginPage extends BasePage {
 
   public isSubmitted: boolean;
 
-  constructor(protected injector: Injector) {
+  constructor(protected injector: Injector,private facebookUsersProvider : FacebookUsersProvider) {
     super(injector);
 
     this.initFormValidators();
 
     this.loginModel = new LoginModel();
+    
   }
 
   private initFormValidators(){
@@ -35,10 +38,17 @@ export class LoginPage extends BasePage {
   }
 
   public onSubmit(){
+    console.log("teste");
     this.isSubmitted = true;
     if(this.loginForm.valid){     
-      this.navCtrl.push(TabsPage);      
+      this.navCtrl.push(MenuPage);      
     }
+  }
+
+  public onFacebookLogin(){
+    let facebookModel : FacebookModel = new FacebookModel();
+    facebookModel.type = this.enumHelper.UserType().Facebook.Id;
+    this.facebookUsersProvider.onFaceLogin(res => console.log(res), err=> console.log(err));
   }
 
   newUser(){
