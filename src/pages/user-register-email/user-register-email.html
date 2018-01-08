@@ -13,7 +13,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="background-content">
   <form [formGroup]="registerForm"(ngSubmit)="onSubmit()">
     <ion-card>
       <ion-card-header>
@@ -25,7 +25,7 @@
                 <ion-label floating> 
                   {{"EMAIL_CONFIRM" | translate}}
                 </ion-label>
-                <ion-input type="text" formControlName="confirmEmail" [(ngModel)]="confirmEmail"></ion-input>
+                <ion-input type="email" formControlName="confirmEmail" [(ngModel)]="confirmEmail"></ion-input>
             </ion-item>
             <error-form [hidden]="!isSubmitted" [errors]="registerForm.controls.confirmEmail.errors"></error-form>
             <button type="submit" ion-button  icon-left block >
