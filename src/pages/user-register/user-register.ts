@@ -47,7 +47,7 @@ export class UserRegisterPage extends BasePage{
   public onSubmit(){
     this.isSubmitted = true;
     if(this.registerForm.valid){     
-      this.navCtrl.push(UserRegisterEmailPage,this.registerModel);      
+      this.navCtrl.setRoot(UserRegisterEmailPage,this.registerModel);      
     }
   }
 

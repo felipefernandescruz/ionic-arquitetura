@@ -41,7 +41,7 @@ export class LoginPage extends BasePage {
     console.log("teste");
     this.isSubmitted = true;
     if(this.loginForm.valid){     
-      this.navCtrl.push(MenuPage);      
+      this.navCtrl.setRoot(MenuPage);      
     }
   }
 
