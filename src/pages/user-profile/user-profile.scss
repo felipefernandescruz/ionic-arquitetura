@@ -1,15 +1,19 @@
-page-user-profile {
-    .profile-picture img {
-        
-          object-fit: cover;
-        overflow: hidden;
-          width: 80px;
-          height: 80px;
-          border-radius: 100%;
-          image-orientation: from-image;
+.ios,.md{
+    page-user-profile {
+
+        .bg{
+            background-image: url('../assets/imgs/dp.jpg');
+            height: 300px;
+            background-size: cover;
+            filter: blur(5px);
+            background-position: center center;
+            
         }
-    .top{
-        background: orange;
-        text-align: center;
+
+        .main-cnt{
+            width: 100%;
+            height: 70%; 
+            background-color: rgb(247, 215, 156);
+        }
     }
 }
