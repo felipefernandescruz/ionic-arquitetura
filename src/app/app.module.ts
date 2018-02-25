@@ -34,6 +34,7 @@ import { FavoritePage } from '../pages/favorite/favorite';
 import { FriendsPage } from '../pages/friends/friends';
 import { MapPage } from '../pages/map/map';
 import { UserProfilePage } from '../pages/user-profile/user-profile';
+import { UserProfileEditPage } from '../pages/user-profile-edit/user-profile-edit';
 
 
 
@@ -57,7 +58,8 @@ export function createTranslateLoader(http: HttpClient) {
     FavoritePage,
     FriendsPage,
     MapPage,
-    UserProfilePage
+    UserProfilePage,
+    UserProfileEditPage
   ],
   imports: [
     BrowserModule,
@@ -87,7 +89,8 @@ export function createTranslateLoader(http: HttpClient) {
     FavoritePage,
     FriendsPage,
     MapPage,
-    UserProfilePage
+    UserProfilePage,
+    UserProfileEditPage
   ],
   providers: [
     Facebook,
@@ -105,7 +108,7 @@ export function createTranslateLoader(http: HttpClient) {
     UserProvider,
     FacebookUsersProvider,
 
-   // Facebook
+
 
   ]
 })

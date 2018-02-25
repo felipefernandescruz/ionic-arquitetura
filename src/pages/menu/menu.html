@@ -2,11 +2,13 @@
 <ion-menu [content]="content"> 
     <ion-header>
         
-          <ion-navbar>
-            <ion-title>{{"PROFILE" | translate}}</ion-title>
-          </ion-navbar>
+        <div class="header-cnt">
+            <img src="./assets/imgs/dp.jpg" class="menu-dp"/>
+            <h1 text-center>Siri</h1>
+            <a (click)="onProfileEdit()" class="perfil-edit">Editar Perfil</a>
+        </div>
         
-        </ion-header>
+    </ion-header>
         
         
         <ion-content >

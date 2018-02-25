@@ -8,6 +8,7 @@ import { FriendsPage } from '../friends/friends';
 import { MapPage } from '../map/map';
 import { UserProfilePage } from '../user-profile/user-profile';
 import { LoginPage } from '../login/login';
+import { UserProfileEditPage } from '../user-profile-edit/user-profile-edit';
 
 export interface PageInterface{
   title:string,
@@ -74,5 +75,9 @@ export class MenuPage extends BasePage {
   }
   private onExit(){
         this.navCtrl.setRoot(LoginPage);
-      }
+  }
+  
+  private onProfileEdit(){
+    this.navCtrl.push(UserProfileEditPage);
+  }
 }
