@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Injector } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { FormGroup } from '@angular/forms';
+import { ProfileModel } from '../../models/profile.model';
+import { BasePage } from '../base';
 
 /**
  * Generated class for the UserProfileEditPage page.
@@ -13,13 +16,29 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-user-profile-edit',
   templateUrl: 'user-profile-edit.html',
 })
-export class UserProfileEditPage {
+export class UserProfileEditPage extends BasePage{
+  public profileModel: ProfileModel;
+  public profileForm: FormGroup;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public isSubmitted: boolean;
+  
+  constructor(protected injector: Injector) {
+    super(injector);
+
+    this.initFormValidators();
+
+    this.profileModel = new ProfileModel();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad UserProfileEditPage');
-  }
+  ionViewDidLoad() {}
 
+  private initFormValidators(){
+    this.profileForm = this.formBuilder.group({
+      userName: ['', this.validators.compose([this.validators.required])],
+      lastName: ['', this.validators.compose([this.validators.required])],
+      description: ['', this.validators.compose([this.validators.email, this.validators.required])],
+    });
+  }
+  
+  public onSubmit(){}
 }

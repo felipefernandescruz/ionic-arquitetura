@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, Injector } from '@angular/core';
+import { IonicPage } from 'ionic-angular';
+import { BasePage } from '../base';
 
 /**
  * Generated class for the UserProfilePage page.
@@ -13,13 +14,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-user-profile',
   templateUrl: 'user-profile.html',
 })
-export class UserProfilePage {
+export class UserProfilePage extends BasePage{
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(protected injector: Injector) {
+    super(injector);
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad UserProfilePage');
-  }
+
 
 }

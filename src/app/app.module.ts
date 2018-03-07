@@ -37,11 +37,6 @@ import { UserProfilePage } from '../pages/user-profile/user-profile';
 import { UserProfileEditPage } from '../pages/user-profile-edit/user-profile-edit';
 
 
-
-
-
-
-
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -59,7 +54,9 @@ export function createTranslateLoader(http: HttpClient) {
     FriendsPage,
     MapPage,
     UserProfilePage,
-    UserProfileEditPage
+    UserProfileEditPage,
+
+
   ],
   imports: [
     BrowserModule,
