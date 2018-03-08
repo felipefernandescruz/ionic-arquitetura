@@ -12,7 +12,7 @@ import 'rxjs/Rx';
 @Injectable()
 export class BaseProvider {
 
-  private serverUrl = 'http://localhost:51159/';
+  private serverUrl = 'http://localhost:2848/';
   
       private storageHelper: StorageHelper;
       private http: HttpClient;
@@ -26,9 +26,10 @@ export class BaseProvider {
   
           let url = this.serverUrl + api;
   
-          let headers = new HttpHeaders()
+          let headers = new HttpHeaders();
+          headers.set('Content-Type','application/x-www-form-urlencoded; charset=UTF-8');
               //.set('Authorization', this.storageHelper.getUserToken())
-              .set('UserId', this.storageHelper.getUserId());
+           //   .set('UserId', this.storageHelper.getUserId());
   
           let options = { headers: headers, params: params };
   
@@ -41,7 +42,8 @@ export class BaseProvider {
   
           let url = this.serverUrl + api;
   
-          let headers = new HttpHeaders()
+          let headers = new HttpHeaders();
+          headers.set('Content-Type','application/x-www-form-urlencoded; charset=UTF-8');
               //.set('Authorization', this.storageHelper.getUserToken())
               //.set('UserId', this.storageHelper.getUserId());
   
@@ -56,7 +58,8 @@ export class BaseProvider {
   
           let url = this.serverUrl + api;
   
-          let headers = new HttpHeaders()
+          let headers = new HttpHeaders();
+          headers.set('Content-Type','application/x-www-form-urlencoded; charset=UTF-8');
               //.set('Authorization', this.storageHelper.getUserToken())
               //.set('UserId', this.storageHelper.getUserId());
   

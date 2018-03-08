@@ -37,7 +37,14 @@ export class UserProvider extends BaseProvider {
 
   public register(userData : RegisterModel){
     let params = new HttpParams();
-    return this.httpPost('ApiUser/Register', userData, params);
+
+    let aux = {
+      "nomeUsuario": "Thiago",
+      "Sobrenome" : "Mendes",
+      "senha" : "84424643674783"
+    
+    };
+    return this.httpPost('api/Authentica/Cadastro', aux, params);
   }
 
 }

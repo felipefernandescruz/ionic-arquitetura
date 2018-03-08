@@ -28,7 +28,7 @@
         "@ngx-translate/core": "^9.0.1",
         "@ngx-translate/http-loader": "^2.0.0",
         "cordova-android": "^6.2.3",
-        "cordova-ios": "^4.4.0",
+        "cordova-ios": "^4.5.4",
         "cordova-plugin-device": "^1.1.4",
         "cordova-plugin-facebook4": "^1.7.4",
         "cordova-plugin-ionic-webview": "^1.1.16",
@@ -61,8 +61,7 @@
             }
         },
         "platforms": [
-            "android",
-            "ios"
+            "android"
         ]
     }
 }

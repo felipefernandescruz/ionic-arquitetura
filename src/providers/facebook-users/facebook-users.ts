@@ -31,7 +31,7 @@ export class FacebookUsersProvider extends BaseProvider{
         .then(profile => {
             let userData = {email: profile.email,first_name: profile.first_name,last_name: profile.last_name, facebookId:profile.id,
             picture: profile['picture_large']['data']['url'], username: profile['name']};
-            console.log(userData)
+
             successCallback(userData);
         });
         console.log('Logged into Facebook!', res)
