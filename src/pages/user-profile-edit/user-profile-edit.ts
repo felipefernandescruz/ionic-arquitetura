@@ -3,13 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FormGroup } from '@angular/forms';
 import { ProfileModel } from '../../models/profile.model';
 import { BasePage } from '../base';
+import { Camera } from '@ionic-native/camera';
 
-/**
- * Generated class for the UserProfileEditPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -21,8 +16,10 @@ export class UserProfileEditPage extends BasePage{
   public profileForm: FormGroup;
 
   public isSubmitted: boolean;
+
+  public base64Image:any = "./assets/imgs/dp.jpg";
   
-  constructor(protected injector: Injector) {
+  constructor(protected injector: Injector, private camera : Camera ) {
     super(injector);
 
     this.initFormValidators();
@@ -39,6 +36,18 @@ export class UserProfileEditPage extends BasePage{
       description: ['', this.validators.compose([this.validators.email, this.validators.required])],
     });
   }
-  
+
+  accessGallery(){
+    
+    this.camera.getPicture({
+      sourceType: this.camera.PictureSourceType.SAVEDPHOTOALBUM,
+      destinationType: this.camera.DestinationType.DATA_URL
+    }).then((imageData) => {
+      this.profileModel.picture = 'data:image/jpeg;base64,'+imageData;
+  //    this.alertHelper.okAlert("atualizou");
+    }, (err)=> {
+      console.log(err);
+    });
+  }
   public onSubmit(){}
 }

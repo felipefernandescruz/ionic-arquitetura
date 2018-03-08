@@ -15,14 +15,14 @@
 
 <ion-content parallax>
   <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-    <div class="bg">
+    <div class="bg" [ngStyle]= "{'background-image': 'url('+ this.profileModel.picture + ')'}">
 
     </div>
     <div class="main-cnt">
-        <img src="./assets/imgs/dp.jpg" class="dp"/>
+        <img [src]="this.profileModel.picture" class="dp"/>
         
     </div>
-    <button ion-button class="btn-picture">Editar Foto</button>
+    <button ion-button class="btn-picture" (click)="accessGallery()">Editar Foto</button>
     <ion-list no-lines>
         <ion-item>
             <ion-label floating>

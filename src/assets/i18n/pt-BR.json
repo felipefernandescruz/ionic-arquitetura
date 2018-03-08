@@ -22,6 +22,8 @@
     
     "NAME": "Nome",
     "NEW_USER":"Novo usuário",
+
+    "OR" : "OU",
   
     "PASSWORD": "Senha",
     "PASSWORD_CONFIRM": "Confirmar senha",

@@ -20,6 +20,7 @@
         "@angular/http": "5.0.0",
         "@angular/platform-browser": "5.0.0",
         "@angular/platform-browser-dynamic": "5.0.0",
+        "@ionic-native/camera": "^4.5.3",
         "@ionic-native/core": "4.3.2",
         "@ionic-native/facebook": "^4.4.2",
         "@ionic-native/splash-screen": "4.3.2",
@@ -29,6 +30,8 @@
         "@ngx-translate/http-loader": "^2.0.0",
         "cordova-android": "^6.2.3",
         "cordova-ios": "^4.5.4",
+        "cordova-plugin-camera": "^2.4.1",
+        "cordova-plugin-compat": "^1.2.0",
         "cordova-plugin-device": "^1.1.4",
         "cordova-plugin-facebook4": "^1.7.4",
         "cordova-plugin-ionic-webview": "^1.1.16",
@@ -58,6 +61,10 @@
             "cordova-plugin-facebook4": {
                 "APP_ID": "182785095630827",
                 "APP_NAME": "Resenha App"
+            },
+            "cordova-plugin-camera": {
+                "CAMERA_USAGE_DESCRIPTION": " ",
+                "PHOTOLIBRARY_USAGE_DESCRIPTION": " "
             }
         },
         "platforms": [
