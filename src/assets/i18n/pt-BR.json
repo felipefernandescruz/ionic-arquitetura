@@ -1,6 +1,8 @@
 {
     "CLIK_HERE": "Clique aqui!",
     "CREATE_NEW_USER": "Criar novo usuário",
+
+    "DESCRIPTION":"Descrição",
  
     "EMAIL": "Email",
     "EMAIL_CONFIRM":"Confirmar email",
@@ -28,10 +30,15 @@
     "PASSWORD": "Senha",
     "PASSWORD_CONFIRM": "Confirmar senha",
     "PASSWORD_NOT_MATCH":"As senhas não são iguais",
+    "PICTURE_UPDATE":"Editar Foto",
+    "PLACE_REGISTER": "CADASTRAR Local",
     "PROFILE":"Perfil",
+    "PROFILE_UPDATE":"Editar Perfil",
   
     "REGISTER":"Cadastrar",
     "RESENHA": "Resenha",
+
+    "USER":"Usuário",
 
     "WELCOME":"Bem vindo ao Resenha App"   
 }

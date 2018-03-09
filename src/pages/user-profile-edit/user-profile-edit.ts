@@ -1,5 +1,5 @@
 import { Component, Injector } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage } from 'ionic-angular';
 import { FormGroup } from '@angular/forms';
 import { ProfileModel } from '../../models/profile.model';
 import { BasePage } from '../base';
@@ -33,11 +33,11 @@ export class UserProfileEditPage extends BasePage{
     this.profileForm = this.formBuilder.group({
       userName: ['', this.validators.compose([this.validators.required])],
       lastName: ['', this.validators.compose([this.validators.required])],
-      description: ['', this.validators.compose([this.validators.email, this.validators.required])],
+      description: ['', this.validators.compose([this.validators.required])],
     });
   }
 
-  accessGallery(){
+  public accessGallery(){
     
     this.camera.getPicture({
       sourceType: this.camera.PictureSourceType.SAVEDPHOTOALBUM,

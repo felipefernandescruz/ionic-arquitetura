@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Editar Perfil</ion-title>
+    <ion-title>{{"PROFILE_UPDATE" | translate}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -22,36 +22,38 @@
         <img [src]="this.profileModel.picture" class="dp"/>
         
     </div>
-    <button ion-button class="btn-picture" (click)="accessGallery()">Editar Foto</button>
+    <button ion-button class="btn-picture" (click)="accessGallery()">
+        {{"PICTURE_UPDATE" | translate}}
+    </button>
     <ion-list no-lines>
         <ion-item>
             <ion-label floating>
-              Nome
+              {{"NAME" | translate}}
               </ion-label>
               <ion-input type="text" formControlName="userName" [(ngModel)]="profileModel.name"></ion-input>
         </ion-item>
         <ion-item>
             <ion-label floating>
-              Sobrenome
+              {{"LAST_NAME" | translate}}
               </ion-label>
               <ion-input type="text" formControlName="lastName" [(ngModel)]="profileModel.lastName"></ion-input>
         </ion-item>
       <ion-item>
           <ion-icon name="book" item-start></ion-icon>
           <ion-label floating>
-            Descrição
+            {{"DESCRIPTION" | translate}}
             </ion-label>
             <ion-textarea elastic type="text" formControlName="description" [(ngModel)]="profileModel.description"></ion-textarea>
       </ion-item>
       <ion-item>
           <ion-icon name="logo-facebook" item-start></ion-icon>
-            Usuário: Siri Yamato
+          {{"USER" | translate}}: Siri Yamato
             <p>www.facebook.com/yamthosiri</p>
             <ion-icon name="arrow-dropright"item-end></ion-icon>
         </ion-item>
         <ion-item>
           <ion-icon name="logo-instagram" item-start></ion-icon>
-            Usuário: Siri Yamato
+          {{"USER" | translate}}: Siri Yamato
             <p>www.instagram.com/yamthosiri</p>
             <ion-icon name="arrow-dropright" item-end></ion-icon>
         </ion-item>
