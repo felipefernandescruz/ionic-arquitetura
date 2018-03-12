@@ -1,25 +1,24 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, Injector } from '@angular/core';
+import { IonicPage} from 'ionic-angular';
+import { BasePage } from '../base';
+import { PlaceRegisterPage } from '../place-register/place-register';
 
-/**
- * Generated class for the MapPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
   selector: 'page-map',
   templateUrl: 'map.html',
 })
-export class MapPage {
+export class MapPage extends BasePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(protected injector: Injector) {
+    super(injector);
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad MapPage');
+  ionViewDidLoad() {}
+
+  public onPlaceRegister(){
+    this.navCtrl.push(PlaceRegisterPage);
   }
 
 }

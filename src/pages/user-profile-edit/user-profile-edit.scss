@@ -28,12 +28,16 @@
             box-shadow: -6px 15px 81px 3px rgba(0,0,0,0.75);
         }
 
-        ion-list ion-item{
+        ion-icon{
             color: red;
+        }
+        
+        ion-list ion-item{
             background-color: #ecf0f1;
             border-radius: 10px;
             margin-bottom: 10px;
         }
+
         .btn-picture{
             margin-top: -15%;
         }

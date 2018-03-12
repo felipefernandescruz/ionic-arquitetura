@@ -12,10 +12,12 @@ import { PipesModule } from '../pipes/pipes.module';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Camera } from '@ionic-native/camera';
+import { Geolocation } from '@ionic-native/geolocation';
 
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { CustomFormsModule } from 'ng2-validation';
+import { BrMaskerModule } from 'brmasker-ionic-3';
 
 import { BaseProvider } from '../providers/base/base';
 import { UserProvider } from '../providers/user/user';
@@ -36,6 +38,8 @@ import { FriendsPage } from '../pages/friends/friends';
 import { MapPage } from '../pages/map/map';
 import { UserProfilePage } from '../pages/user-profile/user-profile';
 import { UserProfileEditPage } from '../pages/user-profile-edit/user-profile-edit';
+import { PlaceRegisterPage } from '../pages/place-register/place-register';
+
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -56,10 +60,10 @@ export function createTranslateLoader(http: HttpClient) {
     MapPage,
     UserProfilePage,
     UserProfileEditPage,
-
-
+    PlaceRegisterPage
   ],
   imports: [
+    BrMaskerModule,
     BrowserModule,
     ComponentsModule,
     CustomFormsModule,
@@ -88,11 +92,14 @@ export function createTranslateLoader(http: HttpClient) {
     FriendsPage,
     MapPage,
     UserProfilePage,
-    UserProfileEditPage
+    UserProfileEditPage,
+    PlaceRegisterPage
   ],
   providers: [
     Facebook,
     Camera,
+    Geolocation,
+
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     { provide: LOCALE_ID, useValue: "pt-BR" },
     StatusBar,

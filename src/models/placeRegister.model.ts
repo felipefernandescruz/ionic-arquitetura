@@ -13,14 +13,16 @@ export class PlaceRegisterModel {
     };
     admin?:number;
     type: number;
+   // permission: PlaceType;
 
     constructor() {
         this.name = '';
-        this.picture='./assets/imgs/splashscreen-resenhapp.png';
+        this.picture='./assets/imgs/login-background.jpg';
         this.phone = null;
         this.capacity = 0;
         this.location = null;
         this.admin = null;
         this.type = null;
+  //      this.permission = new PlaceType(0,"no Definition");
     }
 }

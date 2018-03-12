@@ -1,5 +1,11 @@
 {
+    "ADDRESS":"Endereço",
+
+    "CAPACITY":"Capacidade",
+    "CITY":"Cidade",
     "CLIK_HERE": "Clique aqui!",
+    "CONTACT":"Contato",
+    "COUNTRY":"País",
     "CREATE_NEW_USER": "Criar novo usuário",
 
     "DESCRIPTION":"Descrição",
@@ -30,8 +36,11 @@
     "PASSWORD": "Senha",
     "PASSWORD_CONFIRM": "Confirmar senha",
     "PASSWORD_NOT_MATCH":"As senhas não são iguais",
+    "PHONE":"telefone",
     "PICTURE_UPDATE":"Editar Foto",
-    "PLACE_REGISTER": "CADASTRAR Local",
+    "PLACE_ADD": "Adicionar local",
+    "PLACE_REGISTER": "Cadastrar Local",
+    "PLACE_TYPE":"Tipo do Local",
     "PROFILE":"Perfil",
     "PROFILE_UPDATE":"Editar Perfil",
   
